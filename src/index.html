@@ -4,15 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Front End Web 100</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 
-<body>
+<body class="container">
     <header>
-        <h1>Front End Web 100 Starter</h1>
-        <h2>Progressive ITU</h2>
+        <h1>Tip Calculator</h1>
     </header>
     <main>
-        
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"
+                      id="basic-addon1">$</span>
+            </div>
+            <input type="number"
+                   class="form-control"
+                   aria-label="Amount"
+                   aria-describedby="basic-addon1"
+                   id="AmountInput">
+        </div>
+        <div class="btn-group btn-group-toggle"
+             data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio"
+                       name="percentageOptions"
+                       id="tip10"
+                       value="10"
+                       autocomplete="off"
+                       checked> 10%
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio"
+                       name="percentageOptions"
+                       id="tip15"
+                       value="15"
+                       autocomplete="off"> 15%
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio"
+                       name="percentageOptions"
+                       id="tip20"
+                       value="20"
+                       autocomplete="off"> 20%
+            </label>
+        </div>
+        <div>
+            <label>You are tipping <span id="percentToTipSpan"></span>%</label>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">Bill Amount: <span id="billAmt"></span></li>
+            <li class="list-group-item">Tip Percentage: <span id="percentAmt"></span></li>
+            <li class="list-group-item">Amount of Tip: <span id="tipAmt"></span></li>
+            <li class="list-group-item font-italic">Total to be Paid: <span id="totalAmt"></span></li>
+        </ul>
     </main>
 </body>
 
